@@ -23,9 +23,6 @@ RUN pecl install xdebug-2.9.2 \
 # install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# install NPM# install nodejs and npm
-RUN apk add --no-cache nodejs npm
-
 # uninstall build dependencies
 RUN apk del -f .build-deps
 
